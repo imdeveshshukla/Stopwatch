@@ -1,10 +1,11 @@
 var tim = new Date();
 var t = document.querySelector('#time');
 var sec = document.querySelector('#sec')
-
+var i = 0;
 function startFunc(){
-    var i = 0;
-    incre(i);
+    
+    setInterval(incre,1000);
+    
 }
 function stopFunc() {
     
@@ -14,8 +15,12 @@ function incre(i) {
     // setInterval(function(){
     //     sec.textContent = i++;
     // },1000);
-    if((sec.textContent)/1 < 10) sec.textContent = `0${i}`
-    sec.textContent = i;
+    
+    var k = sec.textContent/1;
+    // console.log(typeof(k));
+    if(k < 10) sec.textContent = `0${i}`
+    else sec.textContent = i;
+    
     i++;
 }
 
