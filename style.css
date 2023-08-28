@@ -1,3 +1,6 @@
 *{
     background: linear-gradient(toright,black,yellow,red,orange);
 }
+#time{
+    font-size: 70px;
+}
