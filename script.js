@@ -20,10 +20,9 @@ function incre(i) {
     // console.log(typeof(k));
     if(k < 10) sec.textContent = `0${i}`
     else sec.textContent = i;
-    
     i++;
 }
-//Flesx1
+//Flex1
 
 
 
