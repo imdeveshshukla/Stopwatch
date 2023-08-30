@@ -22,9 +22,6 @@ function incre(i) {
     else sec.textContent = i;
     i++;
 }
-//Flex1
-//flex2
-//flex3
 
 
 
