@@ -5,14 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@200&family=Roboto:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
     <h1>Stopwatch</h1>
     <div id="container">
         <p id="time"> <span id="min">00</span>:<span id="sec">00</span></p>
-        <button id="startBtn" onclick="startFunc()">Start</button>
-        <button id="stopBtn" onclick="stopFunc()">Stop</button>
-        <button id="reBtn" onclick="resFunc()">Reset</button>
+        <div class="btn">
+            <button id="startBtn" onclick="startFunc()">Start</button>
+            <button id="stopBtn" onclick="stopFunc()">Stop</button>
+            <button id="reBtn" onclick="resFunc()">Reset</button>
+        </div>
     </div>
     <script src="./script.js"></script>
 </body>

@@ -1,7 +1,8 @@
 var tim = new Date();
-var t = document.querySelector('#time');
+var min = document.querySelector('#min');
 var sec = document.querySelector('#sec')
 var i = 0;
+var j =0;
 var id;
 function startFunc(){
     id = setInterval(update,1000);
@@ -15,15 +16,27 @@ function stopFunc() {
 }
 function resFunc(){
     i=0;
-    update();
+    j=0;
+    min.textContent = '00';
+    sec.textContent = '00';
 }
 function update() {
     let k = sec.textContent;
-    if (k/1 < 10) {
+    if (k/1 < 9) {
         sec.textContent = "0"+i;
     }
-    else
+    else if(k>59){
+        j++;
+        i=0;
+        sec.textContent = "0"+i;
+        if(j<10)
+            min.textContent = '0'+j;
+        else    
+            min.textContent = j;
+    }
+    else{
         sec.textContent = i;
+    }
     i++;
 }
 
