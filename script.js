@@ -2,24 +2,28 @@ var tim = new Date();
 var t = document.querySelector('#time');
 var sec = document.querySelector('#sec')
 var i = 0;
+var id;
 function startFunc(){
-    
-    setInterval(incre,1000);
+    id = setInterval(update,1000);
+    console.log(id);
     
 }
 function stopFunc() {
-    
+    // i=0;
+    console.log(id);
+    clearInterval(id);
 }
-function incre(i) {
-    // let i = 0 ;
-    // setInterval(function(){
-    //     sec.textContent = i++;
-    // },1000);
-    
-    var k = sec.textContent/1;
-    // console.log(typeof(k));
-    if(k < 10) sec.textContent = `0${i}`
-    else sec.textContent = i;
+function resFunc(){
+    i=0;
+    update();
+}
+function update() {
+    let k = sec.textContent;
+    if (k/1 < 10) {
+        sec.textContent = "0"+i;
+    }
+    else
+        sec.textContent = i;
     i++;
 }
 
